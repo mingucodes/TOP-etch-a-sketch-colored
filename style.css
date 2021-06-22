@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Londrina+Solid:wght@300&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Londrina Solid';
+  background-color: var(--default-bg);
+}
+
+:root {
+  --column: 16;
+  --bg: rgb(51, 164, 90);
+  /* --trace: black; */
+}
+
+h1 {
+  font-size: 3rem;
+  color: black;
+  text-align: center;
+  margin-top: 30px;
+}
+
+#clear-button {
+  display: block;
+  margin: -10px auto 10px auto;
+  padding: 5px 20px;
+  font-family: inherit;
+  font-size: 16px;
+  background-color: white;
+  border: 2px solid black;
+  border-radius: 12px;
+  color: black;
+  cursor: pointer;
+}
+
+#clear-button:hover {
+  background-color: black;
+  border: 2px solid white;
+  color: white;
+}
+
+#clear-button:active {
+  transform: translateY(5px);
+}
+
+.container {
+  background-color: white;
+  border: 1px solid black;
+  padding: 0;
+  width: 500px;
+  height: 500px;
+  margin: 0 auto;
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: repeat(var(--column), 1fr);
+}
+
+.container > div {
+  color: black;
+  border: 1px solid black;
+}
