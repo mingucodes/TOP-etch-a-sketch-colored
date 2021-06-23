@@ -1,5 +1,5 @@
 const body = document.querySelector('body');
-const container = document.querySelector('.container');
+const container = document.querySelector('.grid-container');
 const blocks = document.querySelectorAll('.block');
 
 // Default Grid //
@@ -25,13 +25,16 @@ function addBlocks(n) {
 function addMouseOver() {
   const blocks = document.querySelectorAll('.block');
   blocks.forEach(block => block.addEventListener('mouseover', function(e) {
-
-  if (random) {
-    let color = getColor();
-    e.target.style.setProperty("background-color", color);
+    e.target.style.setProperty("background-color", 'black');
+    if (userRGB) {
+      toggleUserRGB();
+      e.target.style.setProperty("background-color", userRGB);
+    } else if (random) {
+      let color = getColor();
+      e.target.style.setProperty("background-color", color);
     } else if (eraser) {
       e.target.style.setProperty("background-color", 'white');
-    } else { e.target.style.setProperty("background-color", 'black') }
+    } 
 }));
 }
 
@@ -45,6 +48,15 @@ function clearGridContainer() {
   }
 }
 
+function initialize() {
+  random = false;
+  userRGB = '';
+  document.getElementById('red').value = 0;
+  document.getElementById('green').value = 0;
+  document.getElementById('blue').value = 0;
+  document.documentElement.style.setProperty("--preview", 'black');
+}
+
 function clearGrid() {
   clearGridContainer();
   const squarePer = Number(prompt("How many squares per side?", 16));
@@ -54,7 +66,7 @@ function clearGrid() {
   } else {
     addBlocks(squarePer);
   }
-  random = false;
+  initialize();
 }
 
 // random RGB color - basic //
@@ -76,6 +88,7 @@ let random = false;
 function toggleRandom() {
   random = true;
   eraser = false;
+  userRGB = '';
 }
 
 const randomButton = document.getElementById('random-button');
@@ -88,6 +101,7 @@ blackButton.addEventListener('click', toggleBlack);
 function toggleBlack() {
   random = false;
   eraser = false;
+  userRGB = '';
 }
 
 // eraser handler //
@@ -96,5 +110,40 @@ let eraser = false;
 eraserButton.addEventListener('click', toggleEraser);
 
 function toggleEraser() {
+  random = false;
   eraser = true;
+  userRGB = '';
 }
+
+// rbg selector //
+let userRGB;
+
+function selectRGB() {
+  let red = document.getElementById('red').value;
+  let green = document.getElementById('green').value;
+  let blue = document.getElementById('blue').value;
+
+  userRGB = `rgb(${red},${green},${blue})`;
+
+  document.documentElement.style.setProperty('--preview', userRGB);
+
+}
+
+document.getElementById('red').addEventListener('input', selectRGB);
+document.getElementById('green').addEventListener('input', selectRGB);
+document.getElementById('blue').addEventListener('input', selectRGB);
+
+// rgb handler //
+function toggleUserRGB() {
+  eraser = false;
+  random = false;
+}
+
+// rgb preview click to set color //
+let rgbPreview = document.getElementById('color-preview');
+function setRGB() {
+  userRGB = document.documentElement.style.getPropertyValue(
+    '--preview');
+  toggleUserRGB();
+}
+rgbPreview.addEventListener('click', setRGB);
