@@ -96,5 +96,6 @@ let eraser = false;
 eraserButton.addEventListener('click', toggleEraser);
 
 function toggleEraser() {
+  random = false;
   eraser = true;
 }
