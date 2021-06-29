@@ -10,19 +10,21 @@
 
   <body>
     <h1>etch-a-sketch</h1>
+    <p id="dimension-value">16</p>
+    <input type="range" id="dimension-input" value="16" min=0 max=50>
     <input type="button" id="clear-button" value="clear">
     <input type="button" id="random-button" value="random">
     <input type="button" id="black-button" value="black">
     <input type="button" id="eraser-button" value="eraser">
 
     <div class="rgb-selector">
-      <label for="rgb">red :</label>
+      <label for="red">red :</label>
       <input type="range" id="red" value=0 min="0" max="255">
     
-      <label for="rgb">green :</label>
+      <label for="green">green :</label>
       <input type="range" id="green" value=0 min="0" max="255">
     
-      <label for="rgb">blue :</label>
+      <label for="blue">blue :</label>
       <input type="range" id="blue" value=0 min="0" max="255">
 
       <div id="color-preview"></div>

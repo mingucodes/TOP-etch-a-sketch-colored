@@ -54,6 +54,8 @@ function initialize() {
   document.getElementById('red').value = 0;
   document.getElementById('green').value = 0;
   document.getElementById('blue').value = 0;
+  document.getElementById('dimension-input').value = 0;
+  document.getElementById('dimension-value').textContent = 0;
   document.documentElement.style.setProperty("--preview", 'black');
 }
 
@@ -147,3 +149,17 @@ function setRGB() {
   toggleUserRGB();
 }
 rgbPreview.addEventListener('click', setRGB);
+
+// grid dimension range input handler //
+let userDimension;
+let userInput = document.getElementById('dimension-input');
+const dimensionText = document.getElementById('dimension-value');
+
+function userInputHandler() {
+  clearGridContainer();
+  let userInputValue = userInput.value;
+  dimensionText.textContent = userInputValue;
+  addBlocks(userInputValue);
+}
+
+userInput.addEventListener('input', userInputHandler);
