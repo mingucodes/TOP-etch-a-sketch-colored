@@ -10,26 +10,44 @@
 
   <body>
     <h1>etch-a-sketch</h1>
-    <p id="dimension-value">16</p>
-    <input type="range" id="dimension-input" value="16" min=0 max=50>
-    <input type="button" id="clear-button" value="clear">
-    <input type="button" id="random-button" value="random">
-    <input type="button" id="black-button" value="black">
-    <input type="button" id="eraser-button" value="eraser">
 
-    <div class="rgb-selector">
-      <label for="red">red :</label>
-      <input type="range" id="red" value=0 min="0" max="255">
-    
-      <label for="green">green :</label>
-      <input type="range" id="green" value=0 min="0" max="255">
-    
-      <label for="blue">blue :</label>
-      <input type="range" id="blue" value=0 min="0" max="255">
+    <div class="main-container">
 
-      <div id="color-preview"></div>
+      <div class="grid-container"></div>
+
+      <div class="tools-container">
+
+        <div class="buttons-container">
+          <input type="button" id="random-button" value="random">
+          <input type="button" id="black-button" value="black">
+          <input type="button" id="eraser-button" value="eraser">
+          <input type="button" id="clear-button" value="clear">
+        </div>
+
+        <div class="dimensions-input-container">
+          <p id="dimension-value">16</p>
+          <input type="range" id="dimension-input" value="16" min=0 max=50>
+        </div>
+    
+        <div class="rgb-selector-container">
+          <label for="red">R</label>
+          <input type="range" id="red" value=0 min="0" max="255">
+          <label for="green">G</label>
+          <input type="range" id="green" value=0 min="0" max="255">
+          <label for="blue">B</label>
+          <input type="range" id="blue" value=0 min="0" max="255">
+        </div>
+        
+        <div class="color-palette-container">
+          <div id="color-preview"></div>
+        </div>
+
+      </div>
+
+      
     </div>
-    <div class="grid-container">
-    </div>
+    
+    
+
   </body>
 </html>

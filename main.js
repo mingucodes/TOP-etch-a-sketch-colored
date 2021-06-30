@@ -38,9 +38,13 @@ function addMouseOver() {
 }));
 }
 
-// clear button + prompt for grid dimension //
 const clearButton = document.getElementById('clear-button');
-clearButton.addEventListener('click', clearGrid);
+
+function eraseTrace() {
+  const blocks = document.querySelectorAll('.block');
+  blocks.forEach(block => block.style.setProperty("background-color", 'white'));
+}
+clearButton.addEventListener('click', eraseTrace);
 
 function clearGridContainer() {
   while (container.firstChild) {

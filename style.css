@@ -20,10 +20,8 @@ h1 {
   margin-top: 30px;
 }
 
-#clear-button {
-  display: block;
-  margin: -10px auto 10px auto;
-  padding: 5px 20px;
+input[type='button'] {
+  padding: 5px 15px;
   font-family: inherit;
   font-size: 16px;
   background-color: white;
@@ -33,19 +31,19 @@ h1 {
   cursor: pointer;
 }
 
-#clear-button:hover {
+input[type='button']:hover {
   background-color: black;
   border: 2px solid white;
   color: white;
 }
 
-#clear-button:active {
+input[type='button']:active {
   transform: translateY(5px);
 }
 
 .grid-container {
   background-color: white;
-  border: 1px solid black;
+  /* border: 1px solid black; */
   padding: 0;
   width: 500px;
   height: 500px;
@@ -53,6 +51,7 @@ h1 {
   margin-top: 30px;
   display: grid;
   grid-template-columns: repeat(var(--column), 1fr);
+  grid-gap: 1px;
 }
 
 .grid-container > div {
@@ -60,7 +59,7 @@ h1 {
   border: 1px solid black;
 }
 
-.rgb-selector > input {
+.rgb-selector-container > input {
   display: block;
 }
 
