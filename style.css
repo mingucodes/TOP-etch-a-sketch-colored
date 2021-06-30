@@ -43,12 +43,12 @@ input[type='button']:active {
 
 .grid-container {
   background-color: white;
-  /* border: 1px solid black; */
+
+  border: 3px solid orange;
+
   padding: 0;
   width: 500px;
   height: 500px;
-  margin: 0 auto;
-  margin-top: 30px;
   display: grid;
   grid-template-columns: repeat(var(--column), 1fr);
   grid-gap: 1px;
@@ -74,4 +74,27 @@ input[type='button']:active {
 
 #color-preview:active {
   transform: scale(1.1);
+}
+
+.main-container {
+  border: solid 3px blue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tools-container {
+  border: solid 3px red;
+}
+
+.buttons-container {
+  border: solid 1px black;
+}
+
+.rgb-selector-container {
+  border: solid 1px black;
+}
+
+.color-palette-container {
+  border: solid 1px black;
 }
