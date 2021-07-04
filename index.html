@@ -9,13 +9,18 @@
   </head>
 
   <body>
-    <h1>etch-a-sketch</h1>
+    <button class="title-text" onClick="window.location.reload();">etch-a-sketch</button>
 
     <div class="main-container">
 
       <div class="grid-container"></div>
 
       <div class="tools-container">
+
+        <div class="dimension-input-container">
+          <p id="dimension-value">Dimension: 16 x 16</p>
+          <input type="range" id="dimension-input" value="16" min=0 max=50>
+        </div>
 
         <div class="buttons-container">
           <input type="button" id="random-button" value="random">
@@ -24,27 +29,27 @@
           <input type="button" id="clear-button" value="clear">
         </div>
 
-        <div class="dimensions-input-container">
-          <p id="dimension-value">16</p>
-          <input type="range" id="dimension-input" value="16" min=0 max=50>
-        </div>
-    
         <div class="rgb-selector-container">
-          <label for="red">R</label>
-          <input type="range" id="red" value=0 min="0" max="255">
-          <label for="green">G</label>
-          <input type="range" id="green" value=0 min="0" max="255">
-          <label for="blue">B</label>
-          <input type="range" id="blue" value=0 min="0" max="255">
+
+          <div class="rgb-selectors">
+            <label for="red">r</label>
+            <input type="range" id="red" value=0 min="0" max="255">
+            <label for="green">g</label>
+            <input type="range" id="green" value=0 min="0" max="255">
+            <label for="blue">b</label>
+            <input type="range" id="blue" value=0 min="0" max="255">
+          </div>
+
+          <div id="color-preview"></div>
         </div>
         
-        <div class="color-palette-container">
-          <div id="color-preview"></div>
+        <!-- <div class="color-palette-container"> -->
+          
         </div>
 
       </div>
 
-      
+
     </div>
     
     

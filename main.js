@@ -162,7 +162,7 @@ const dimensionText = document.getElementById('dimension-value');
 function userInputHandler() {
   clearGridContainer();
   let userInputValue = userInput.value;
-  dimensionText.textContent = userInputValue;
+  dimensionText.textContent = `Dimension: ${userInputValue} x ${userInputValue}`;
   addBlocks(userInputValue);
 }
 
