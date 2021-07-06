@@ -2,6 +2,11 @@ const body = document.querySelector('body');
 const container = document.querySelector('.grid-container');
 const blocks = document.querySelectorAll('.block');
 
+const title = document.querySelector('.title-text');
+title.addEventListener('click', () => {
+  window.location.reload();
+})
+
 // Default Grid //
 addBlocks(16);
 

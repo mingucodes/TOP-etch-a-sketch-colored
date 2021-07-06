@@ -13,15 +13,51 @@ body {
   --preview: black;
 }
 
+/* .header {
+  display: flex;
+  margin-top: 20px;
+  margin-bottom: -50px;
+} */
+
+/* #title-padding-front {
+  flex-grow: 2;
+  border: 2px solid blue;
+  flex-shrink: 10;
+} */
+
+/* #title-padding-back {
+  flex-grow: 3;
+  border: 2px solid blue;
+  flex-shrink: 1;
+} */
+
 .title-text {
-  display: block;
-  font-family: inherit;
-  font-size: 3rem;
+  /* flex-grow: 1; */
+  display: inline-block;
+  font-size: 2rem;
   color: black;
   background-color: white;
-  border: none;
-  margin: 30px auto -30px auto;
+  /* width: 500px; */
+  margin: 25px auto 10px 20px;
+  /* border: 2px solid red; */
 }
+
+/* title position */
+/* @media screen and (max-width: 720px) {
+  #title-padding-front {
+    flex-grow: 1;
+    flex-shrink: 10;
+  }
+
+  .title-text {
+    width: 200px;
+  }
+
+  #title-padding-back {
+    flex-grow: 30;
+    flex-shrink: 1;
+  }
+} */
 
 .title-text:hover {
   cursor: pointer;
@@ -34,8 +70,9 @@ body {
 
 .grid-container {
   padding: 0;
-  width: 500px;
-  height: 500px;
+  min-width: 600px;
+  width: 600px;
+  height: 600px;
   display: grid;
   grid-template-columns: repeat(var(--column), 1fr);
   grid-gap: 1px;
@@ -68,10 +105,11 @@ body {
 
 .main-container {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: flex-start;
   column-gap: 15px;
-  margin-top: 50px;
+  margin-top: 10px;
+  margin-left: 20px;
 }
 
 .tools-container {
