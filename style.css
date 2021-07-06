@@ -13,51 +13,13 @@ body {
   --preview: black;
 }
 
-/* .header {
-  display: flex;
-  margin-top: 20px;
-  margin-bottom: -50px;
-} */
-
-/* #title-padding-front {
-  flex-grow: 2;
-  border: 2px solid blue;
-  flex-shrink: 10;
-} */
-
-/* #title-padding-back {
-  flex-grow: 3;
-  border: 2px solid blue;
-  flex-shrink: 1;
-} */
-
 .title-text {
-  /* flex-grow: 1; */
   display: inline-block;
   font-size: 2rem;
   color: black;
   background-color: white;
-  /* width: 500px; */
   margin: 25px auto 10px 20px;
-  /* border: 2px solid red; */
 }
-
-/* title position */
-/* @media screen and (max-width: 720px) {
-  #title-padding-front {
-    flex-grow: 1;
-    flex-shrink: 10;
-  }
-
-  .title-text {
-    width: 200px;
-  }
-
-  #title-padding-back {
-    flex-grow: 30;
-    flex-shrink: 1;
-  }
-} */
 
 .title-text:hover {
   cursor: pointer;
@@ -92,10 +54,9 @@ body {
   background-color: var(--preview);
   width: 40px;
   height: 40px;
-  /* border-radius: 25px; */
   cursor: pointer;
   margin: 5px 3px;
-  margin: 15px auto 0px auto;
+  margin-top: 25px;
   border: 2px solid black;
 }
 
@@ -113,13 +74,11 @@ body {
 }
 
 .tools-container {
-  /* border: solid 3px red; */
   width: 180px;
 }
 
 /* Dimension Input */
 .dimension-input-container {
-  /* border: 2px solid skyblue; */
   margin-top: 10px;
 }
 
@@ -136,7 +95,6 @@ body {
 
 /* Buttons  */
 .buttons-container {
-  /* border: solid 3px green; */
   display: grid;
   grid-row-gap: 15px;
   margin-top: 70px;
@@ -148,7 +106,6 @@ input[type='button'] {
   font-size: 20px;
   background-color: white;
   border: 2px solid black;
-  /* border-radius: 12px; */
   color: black;
   cursor: pointer;
 
@@ -157,7 +114,6 @@ input[type='button'] {
 
 input[type='button']:hover {
   background-color: black;
-  /* border: 2px solid white; */
   color: white;
 }
 
@@ -167,17 +123,15 @@ input[type='button']:active {
 
 /* RGB input */
 .rgb-selector-container {
-  /* border: solid 3px black; */
   display: flex;
   align-items: center;
   width: 200px;
-  margin-top: 40px;
+  margin-top: 50px;
 }
 
 .rgb-selectors {
   display: flex;
   flex-direction: column;
-  /* border: solid 2px red; */
   width: 100px;
 }
 
@@ -192,12 +146,10 @@ input[type='range'] {
   -webkit-appearance: none;
   background-color: white;
   border: 2px solid black;
-  /* border-radius: 25px; */
 }
 
 input[type='range']::-webkit-slider-thumb {
   -webkit-appearance: none;
-  /* border-radius: 50%; */
   height: 15px;
   width: 15px;
   background: black;
